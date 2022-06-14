@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="19455" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="9K2-C1-Cgj" customClass="Shelf" customModule="TestTvOSRails" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1633" height="656"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OOg-az-6PM">
+                <rect key="frame" x="0.0" y="0.0" width="1633" height="656"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClP-yl-p3e" userLabel="Title">
+                        <rect key="frame" x="0.0" y="0.0" width="1633" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="ndl-qS-5xy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="D3i-H3-yYH">
+                        <rect key="frame" x="0.0" y="90" width="1633" height="566"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pyy-aS-aSo">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ClP-yl-p3e" secondAttribute="trailing" id="4YI-oa-kCj"/>
+                    <constraint firstItem="D3i-H3-yYH" firstAttribute="leading" secondItem="OOg-az-6PM" secondAttribute="leading" id="Dc6-5E-4YR"/>
+                    <constraint firstAttribute="trailing" secondItem="D3i-H3-yYH" secondAttribute="trailing" id="J46-e3-UcQ"/>
+                    <constraint firstItem="ClP-yl-p3e" firstAttribute="top" secondItem="OOg-az-6PM" secondAttribute="top" id="OsT-Fc-RUf"/>
+                    <constraint firstItem="ClP-yl-p3e" firstAttribute="leading" secondItem="OOg-az-6PM" secondAttribute="leading" id="WNb-we-bbx"/>
+                    <constraint firstItem="D3i-H3-yYH" firstAttribute="top" secondItem="ClP-yl-p3e" secondAttribute="bottom" constant="40" id="eRB-jX-60c"/>
+                    <constraint firstAttribute="bottom" secondItem="D3i-H3-yYH" secondAttribute="bottom" id="xlS-Co-qpN"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="1633" height="656"/>
+            <connections>
+                <outlet property="shelfItemsCollectionView" destination="D3i-H3-yYH" id="R2x-0x-6xl"/>
+                <outlet property="titleLabel" destination="ClP-yl-p3e" id="p86-Sa-Qvo"/>
+            </connections>
+            <point key="canvasLocation" x="287.5" y="75"/>
+        </collectionViewCell>
+    </objects>
+</document>
